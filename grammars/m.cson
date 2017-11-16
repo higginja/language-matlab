@@ -834,10 +834,21 @@ repository:
       }
       {
         begin: "%\\{"
+        beginCaptures:
+          "0":
+            name: "punctuation.definition.comment.begin.matlab"
+        end: "\\}%"
+        endCaptures:
+          "0":
+            name: "punctuation.definition.comment.end.matlab"
+        name: "comment.inline.percentage.matlab"
+      }
+      {
+        begin: "%\\{"
         captures:
           "1":
             name: "punctuation.definition.comment.matlab"
-        end: "%\\}\\s*\\n"
+        end: "\\}%\\s*\\n"
         name: "comment.block.percentage.matlab"
       }
       {

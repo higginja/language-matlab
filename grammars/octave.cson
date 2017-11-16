@@ -105,6 +105,17 @@ repository:
   all_octave_comments:
     patterns: [
       {
+        begin: "%\\{"
+        beginCaptures:
+          "0":
+            name: "punctuation.definition.comment.begin.octave"
+        end: "\\}%"
+        endCaptures:
+          "0":
+            name: "punctuation.definition.comment.end.octave"
+        name: "comment.block.percentage.octave"
+      }
+      {
         begin: "(^[ \\t]+)?(?=%%)"
         beginCaptures:
           "1":
@@ -120,14 +131,6 @@ repository:
             name: "comment.line.double-percentage.octave"
           }
         ]
-      }
-      {
-        begin: "%\\{"
-        captures:
-          "1":
-            name: "punctuation.definition.comment.octave"
-        end: "%\\}"
-        name: "comment.block.percentage.octave"
       }
       {
         begin: "(^[ \\t]+)?(?=%)"
@@ -302,7 +305,7 @@ repository:
     name: "support.function.octave"
   operators:
     comment: "Operator symbols"
-    match: "\\s*(\\+\\+|--|\\+=|-=|\\*=|\\/=|\\^=|\\.\\*=|\\.\\/=|\\.\\^=|==|~=|>|>=|<|<=|&|&&|:|\\||\\|\\||\\+|-|\\*|\\.\\*|/|\\./|\\\\|\\.\\\\|\\^|\\.\\^|!)\\s*"
+    match: "\\s*(\\+\\+|--|\\+=|-=|\\*=|\\/=|\\^=|\\.\\*=|\\.\\/=|\\.\\^=|==|~=|>|>=|<|<=|&|&&|:|\\||\\|\\||\\+|-|\\*|\\.\\*|/|\\./|\\\\|\\.\\\\|\\^|\\.\\^|\\...\\|!)\\s*"
     name: "keyword.operator.symbols.octave"
   parens:
     begin: "\\("
