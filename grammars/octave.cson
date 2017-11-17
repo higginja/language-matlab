@@ -109,7 +109,7 @@ repository:
         beginCaptures:
           "0":
             name: "punctuation.definition.comment.begin.octave"
-        end: "\\}%"
+        end: "%\\}"
         endCaptures:
           "0":
             name: "punctuation.definition.comment.end.octave"
